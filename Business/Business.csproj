@@ -7,7 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ConnectionFactory\" />
+    <Compile Remove="ConnectionFactory\**" />
+    <EmbeddedResource Remove="ConnectionFactory\**" />
+    <None Remove="ConnectionFactory\**" />
   </ItemGroup>
 
   <ItemGroup>
