@@ -7,14 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ConnectionFactory\" />
+    <Compile Remove="ConnectionFactory\**" />
+    <EmbeddedResource Remove="ConnectionFactory\**" />
+    <None Remove="ConnectionFactory\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Amqp" Version="2.5.12" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.1" />
+    <PackageReference Include="MySql.Data" Version="8.0.29" />
     <PackageReference Include="Npgsql" Version="6.0.4" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace Transform
 {
-    public class Class1
+    public class Transform
     {
 
     }
