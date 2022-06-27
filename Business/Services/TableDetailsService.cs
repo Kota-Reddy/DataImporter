@@ -261,6 +261,8 @@ namespace Business.Services
 
                 SqlConnection conn = new SqlConnection(str);
                 conn.Open();
+
+                //SqlCommand command = new SqlCommand("SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME   = '" + tableName + "'", conn);
                 SqlCommand command = new SqlCommand("SELECT  C.COLUMN_NAME, C.DATA_TYPE, C.CHARACTER_MAXIMUM_LENGTH, U.CONSTRAINT_NAME FROM INFORMATION_SCHEMA.COLUMNS C FULL OUTER JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE U ON C.COLUMN_NAME = U.COLUMN_NAME WHERE C.TABLE_NAME = '" + tableName + "'", conn);
 
                 SqlDataReader dr = command.ExecuteReader();
